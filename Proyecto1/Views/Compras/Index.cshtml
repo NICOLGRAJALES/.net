@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Proyecto1.Models.Compra>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Compras</h1>
+
+<div class="container mt-4">
+    <p class="text-right">
+        <a asp-action="Create" class="btn" style="background-color: #f8d3e2; color: #d63384;">Compras Nuevo</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead style="background-color: #f8d3e2;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cantidad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaCompra)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdClienteNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdProductoNavigation)
+                </th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cantidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaCompra)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdClienteNavigation.Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdProductoNavigation.Id)
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn" style="background-color: #f8d3e2; color: #d63384;">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

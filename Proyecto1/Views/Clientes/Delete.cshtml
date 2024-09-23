@@ -1,0 +1,65 @@
+﻿@model Proyecto1.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["ErrorP"] != null)
+{
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-white">
+                <div class="modal-header bg-danger">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¡¡ ERROR !!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger">
+                        @TempData["ErrorP"]
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<h3 class="text-center" style="color: #d63384;">¿Estás seguro de que deseas eliminar esto?</h3>
+<div class="container mt-4">
+    <h4 class="text-center" style="color: #d63384">Cliente</h4>
+    <hr style="border-color: #d1a2b8;" />
+    <dl class="row">
+        <dt class="col-sm-2 font-weight-bold text-pink">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2 font-weight-bold text-pink">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" class="text-center mt-3">
+        <input type="hidden" asp-for="Documento" />
+        <input type="submit" value="Eliminar" class="btn" style="background-color: #f8d3e2; color: #d63384;" />
+        <a asp-action="Index" class="btn btn-link" style="color: #d63384;">Volver a la lista</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var error = '@TempData["ErrorP"]';
+            if (error) {
+                $('#exampleModal').modal('show');
+            }
+        });
+    </script>
+}

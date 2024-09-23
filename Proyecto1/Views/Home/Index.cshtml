@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Catálogo de Uñas</title>
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .catalogo {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mt-5">Catálogo de Uñas</h1>
+        <div class="row catalogo">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/css/img/uñas12.jpg" class="card-img-top" alt="Uñas Estilo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Estilo Rosas</h5>
+                        <p class="card-text">Uñas decoradas con diseños florales y colores pastel.</p>
+                        <p class="price">Precio: $20.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/css/img/uñas2.jpg" class="card-img-top" alt="Uñas Estilo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Estilo Blanco</h5>
+                        <p class="card-text">Diseños modernos con patrones geométricos en tonos vibrantes.</p>
+                        <p class="price">Precio: $25.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/css/img/uñas3.jpg" class="card-img-top" alt="Uñas Estilo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Estilo Degradado</h5>
+                        <p class="card-text">Uñas elegantes en colores clásicos, perfectas para cualquier ocasión.</p>
+                        <p class="price">Precio: $15.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

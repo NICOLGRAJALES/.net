@@ -1,0 +1,46 @@
+﻿@model Proyecto1.Models.Compra
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h4 class="text-center" style="color: #d63384;">Compra</h4>
+    <hr style="border-color: #f8d3e2;" />
+
+    <dl class="row">
+        <dt class="col-sm-4 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt class="col-sm-4 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.FechaCompra)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.FechaCompra)
+        </dd>
+        <dt class="col-sm-4 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.IdClienteNavigation)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.IdClienteNavigation.Documento)
+        </dd>
+        <dt class="col-sm-4 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.IdProductoNavigation)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.IdProductoNavigation.Id)
+        </dd>
+    </dl>
+
+    <div class="text-center mt-3">
+        <a asp-action="Edit" asp-route-id="@Model?.Documento" class="btn" style="background-color: #f8d3e2; color: #d63384;">Editar</a>
+        <span class="mx-2">|</span>
+        <a asp-action="Index" class="btn btn-link" style="color: #d63384;">Volver a la lista</a>
+    </div>
+</div>
+
+

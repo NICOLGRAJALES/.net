@@ -1,0 +1,33 @@
+﻿@model Proyecto1.Models.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h4 class="text-center" style="color: #d63384;">Cliente</h4>
+    <hr style="border-color: #f8d3e2;" />
+    <dl class="row">
+        <dt class="col-sm-2 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2 font-weight-bold" style="color: #d63384;">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+    </dl>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Documento" class="btn" style="background-color: #f8d3e2; color: #d63384;">Editar</a>
+    <span class="mx-2">|</span>
+    <a asp-action="Index" class="btn btn-link" style="color: #d63384;">Volver a la lista</a>
+</div>
+
+

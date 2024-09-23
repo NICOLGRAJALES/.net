@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\2925211\\Proyecto1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBF14389-A5AC-42A6-AAB0-A3BEFC5C61C3}|Proyecto1\\Proyecto1.csproj|c:\\users\\user\\source\\repos\\2925211\\proyecto1\\proyecto1\\views\\compras\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBF14389-A5AC-42A6-AAB0-A3BEFC5C61C3}|Proyecto1\\Proyecto1.csproj|solutionrelative:proyecto1\\views\\compras\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\2925211\\Proyecto1\\Proyecto1\\Views\\Compras\\Details.cshtml",
+              "RelativeDocumentMoniker": "Proyecto1\\Views\\Compras\\Details.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\2925211\\Proyecto1\\Proyecto1\\Views\\Compras\\Details.cshtml",
+              "RelativeToolTip": "Proyecto1\\Views\\Compras\\Details.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T19:42:02.645Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
